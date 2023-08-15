@@ -8,7 +8,7 @@ import {
   getEnv,
   assertDataSource,
 } from '@cubejs-backend/shared';
-
+import { get } from 'env-var';
 import fs from 'fs';
 import path from 'path';
 import { S3, GetObjectCommand } from '@aws-sdk/client-s3';
@@ -139,7 +139,6 @@ export class MSFabricDriver extends JDBCDriver {
     let showSparkProtocolWarn = false;
     let url: string =
       conf?.url ||
-      getEnv('connectionstring', { dataSource }) ||
       getEnv('jdbcUrl', { dataSource });
 
     const config: MSFabricDriverConfiguration = {

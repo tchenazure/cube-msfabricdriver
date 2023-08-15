@@ -2,7 +2,7 @@
   "name": "cubejs-msfabric-jdbc-driver",
   "description": "Cube.js MS Fabric database driver",
   "author": "RamSoft Inc.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
