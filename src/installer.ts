@@ -6,9 +6,7 @@ function acceptedByEnv() {
   const acceptStatus = get('CUBEJS_DB_MSFABRIC_ACCEPT_POLICY');
   if (acceptStatus) {
     console.log('You accepted Terms & Conditions for MSFabric JDBC driver by CUBEJS_DB_MSFABRIC_ACCEPT_POLICY');
-  }
-
-  if (acceptStatus === false) {
+  }  else  {
     console.log('You declined Terms & Conditions for MSFabric JDBC driver by CUBEJS_DB_MSFABRIC_ACCEPT_POLICY');
     console.log('Installation will be skipped');
   }

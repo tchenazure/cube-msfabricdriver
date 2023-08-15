@@ -151,7 +151,7 @@ export class MSFabricDriver extends JDBCDriver {
         // PWD-parameter passed to the connection string has higher priority,
         // so we can set this one to an empty string to avoid a Java error.
         PWD:
-          getEnv('password', { dataSource }) ||
+          getEnv('sqlPassword', { dataSource }) ||
           '',
         UserAgentEntry: 'CubeDev_Cube',
       },

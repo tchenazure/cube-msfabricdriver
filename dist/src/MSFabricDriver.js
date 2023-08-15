@@ -55,7 +55,6 @@ class MSFabricDriver extends jdbc_driver_1.JDBCDriver {
             (0, shared_1.assertDataSource)('default');
         let showSparkProtocolWarn = false;
         let url = conf?.url ||
-            (0, shared_1.getEnv)('connectionstring', { dataSource }) ||
             (0, shared_1.getEnv)('jdbcUrl', { dataSource });
         const config = {
             ...conf,
@@ -66,7 +65,7 @@ class MSFabricDriver extends jdbc_driver_1.JDBCDriver {
             properties: {
                 // PWD-parameter passed to the connection string has higher priority,
                 // so we can set this one to an empty string to avoid a Java error.
-                PWD: (0, shared_1.getEnv)('password', { dataSource }) ||
+                PWD: (0, shared_1.getEnv)('sqlPassword', { dataSource }) ||
                     '',
                 UserAgentEntry: 'CubeDev_Cube',
             },
